@@ -378,6 +378,9 @@ static void update_leds(int monid)
 
 	statusline_getpos(monid, &osdx, &osdy, crop_rect.w + crop_rect.x, crop_rect.h + crop_rect.y);
 	int m = statusline_get_multiplier(monid) / 100;
+
+	statusline_render(monid, (uae_u8*)amiga_surface->pixels, 32 / 8, amiga_surface->pitch, crop_rect.w + crop_rect.x, TD_TOTAL_HEIGHT * m, rc, gc, bc, a);
+
 	for (int y = 0; y < TD_TOTAL_HEIGHT * m; y++) {
 		uae_u8 *buf = (uae_u8*)amiga_surface->pixels + (y + osdy) * amiga_surface->pitch;
 		draw_status_line_single(monid, buf, 32 / 8, y, crop_rect.w + crop_rect.x, rc, gc, bc, a);

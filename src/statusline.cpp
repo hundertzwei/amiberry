@@ -572,20 +572,3 @@ void statusline_single_erase(int monid, uae_u8 *buf, int bpp, int y, int totalwi
 {
 	memset(buf, 0, bpp * totalwidth);
 }
-
-#ifdef AMIBERRY // no-op for now
-void statusline_updated(int monid)
-{
-
-}
-
-void statusline_render(int monid, uae_u8 *buf, int bpp, int pitch, int width, int height, uae_u32 *rc, uae_u32 *gc, uae_u32 *bc, uae_u32 *alpha)
-{
-
-}
-
-void ldp_render(const char* txt, int len, uae_u8* buf, struct vidbuffer*, int x, int y, int mx, int my)
-{
-	//TODO: Implement
-}
-#endif

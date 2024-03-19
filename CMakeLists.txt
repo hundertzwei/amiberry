@@ -285,6 +285,7 @@ add_executable(${PROJECT_NAME}
         src/osdep/amiberry_mem.cpp
         src/osdep/amiberry_serial.cpp
         src/osdep/amiberry_uaenet.cpp
+        src/osdep/amiberry_statusline.cpp
         src/osdep/amiberry_whdbooter.cpp
         src/osdep/ioport.cpp
         src/osdep/sigsegv_handler.cpp
@@ -358,7 +359,7 @@ add_executable(${PROJECT_NAME}
         src/jit/compstbl.cpp
         src/jit/compemu_fpp.cpp
         src/jit/compemu_support.cpp
-)
+ )
 
 if (CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64" OR ARCHITECTURE MATCHES "arm64")
     add_definitions(-DCPU_AARCH64)

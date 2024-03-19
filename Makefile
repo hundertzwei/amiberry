@@ -586,6 +586,7 @@ OBJS = \
 	src/osdep/amiberry_mem.o \
 	src/osdep/amiberry_serial.o \
 	src/osdep/amiberry_uaenet.o \
+	src/osdep/amiberry_statusline.o \
 	src/osdep/amiberry_whdbooter.o \
 	src/osdep/ioport.o \
 	src/osdep/sigsegv_handler.o \
